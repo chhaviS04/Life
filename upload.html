@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Upload an Image</h2>
+        <input type="file" id="imageUpload" accept="image/*" required>
+        <button id="submitImage" class="login-btn">Submit Image</button>
+    </div>
+
+    <script>
+        document.getElementById('submitImage').addEventListener('click', function() {
+            const imageInput = document.getElementById('imageUpload');
+            if (imageInput.files.length > 0) {
+                alert('Image uploaded successfully!');
+                // You can add further code here to handle the uploaded image
+            } else {
+                alert('Please select an image to upload.');
+            }
+        });
+    </script>
+</body>
+</html>
